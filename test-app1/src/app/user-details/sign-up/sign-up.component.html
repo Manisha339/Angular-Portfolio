@@ -1,0 +1,36 @@
+<div class="user-form">
+    <h2>Sign Up Details</h2>
+
+    <form [formGroup]="userForm" (ngSubmit)="handleFormSubmit()">
+
+        FirstName: &nbsp;&nbsp;<input type="text" [ngClass]="{'invalid': formSubmitted && formControls.firstName.errors}"
+            formControlName="firstName" />
+        <span *ngIf="formSubmitted && formControls.firstName.errors">FirstName is requried</span>
+        
+        <br />
+        <br />
+        LastName: &nbsp;&nbsp;<input type="text" [ngClass]="{'invalid': formSubmitted && formControls.lastName.errors}"
+            formControlName="lastName" />
+        <span *ngIf="formSubmitted && formControls.lastName.errors">LastName is requried</span>
+        <br />
+        <br />
+        Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" formControlName="email" />
+        <span *ngIf="formSubmitted && formControls.email.errors">Email should be valid</span>
+        <br />
+        <br />
+        Password: &nbsp;&nbsp;&nbsp;<input type="password" formControlName="password" />
+        <span *ngIf="formSubmitted && formControls.password.errors">Password minlength 6 requried</span>
+        <br />
+        <br />
+        Mobile No: &nbsp;<input type="number" formControlName="mobileno" />
+        <span *ngIf="formSubmitted && formControls.mobileno.errors">Mobile Number minlength 10 requried</span>
+        <br />
+        <br />
+        <span>
+         
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="submit" name="submit">SignUp</button>
+        </span>
+    </form>
+</div>
