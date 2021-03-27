@@ -9,4 +9,4 @@
 
 [2]  The App also have Nav-Bar component which is used to display the header in the webpage from which we can have a router.
 
-[3]  
+[3]  App Routing Module is a file which is used to connect the Sign-In and Sign-Up page by using app-routing.module.ts file
