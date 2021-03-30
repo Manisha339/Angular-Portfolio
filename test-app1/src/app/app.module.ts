@@ -11,7 +11,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
   declarations: [
     AppComponent,
     NavBarComponent,
-    
+
   ],
   imports: [
     BrowserModule,
